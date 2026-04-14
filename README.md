@@ -1,81 +1,70 @@
-# MDMC-MOP (Python + pymoo)
+# pdi_analise
 
-Versao Python dos algoritmos do repositorio [MDMC-MOP](https://github.com/moreirag/MDMC-MOP), portados para a biblioteca `pymoo`.
+## IRaMuTeQ
 
-## Algoritmos incluidos
+Este projeto prepara o corpus para o IRaMuTeQ e orienta a gerar visualizações de
+frequência e conectividade (análise de similitude).
 
-- `ROINSGA2`: NSGA-II com penalizacao de regiao de interesse (ROI) no espaco de objetivos.
-- `ROIDWUMOEA`: ROI + selecao por uniformidade ponderada por dominancia no espaco de decisao.
+## Analise dos PDIs do Sudeste
 
-## Estrutura
+Ferramenta inicial para a etapa exploratoria da pesquisa sobre cultura nos PDIs
+das universidades federais do Sudeste.
 
-- `/Users/gladstonmoreira/Documents/New project/mdmc_mop_py/algorithms.py`: implementacao dos algoritmos e operadores customizados.
-- `/Users/gladstonmoreira/Documents/New project/scripts/run_experiment.py`: script CLI para executar experimentos.
+Saidas geradas em `output/sudeste/`:
 
-## Instalacao
+- `iramuteq_corpus_sudeste.txt`: corpus consolidado para abrir no IRaMuTeQ.
+- `cultura_resumo.csv`: resumo por universidade, com densidade de contextos de cultura.
+- `cultura_contextos.csv`: trechos em que aparecem termos da familia `cultur*`.
+- `analise_sudeste.md`: relatorio sintese para leitura rapida.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+Execucao:
+
+```
+python3 scripts/analyze_sudeste_pdis.py
 ```
 
-## Exemplo de execucao
+## IDIC do Sudeste
 
-Equivalente ao `run_test.m` (WFG9, M=2, D=5, 1e5 avaliacoes):
+Ferramenta para construir uma versao preliminar do Indice de Densidade
+Institucional da Cultura (IDIC), combinando:
 
-```bash
-PYTHONPATH=. python scripts/run_experiment.py \
-  --algorithm roidwu \
-  --problem wfg9 \
-  --pop-size 100 \
-  --n-obj 2 \
-  --n-var 5 \
-  --n-evals 100000 \
-  --seed 1
+- indicadores discursivos extraidos dos PDIs;
+- disponibilidade de organograma no repositorio;
+- uma base manual preenchivel com nivel organizacional da cultura, quadro de
+  produtores culturais e evidencias institucionais.
+
+Execucao:
+
+```
+python3 scripts/build_idic_sudeste.py
 ```
 
-Executar a variante ROI-NSGA-II:
+Arquivos gerados:
 
-```bash
-PYTHONPATH=. python scripts/run_experiment.py \
-  --algorithm roinsga2 \
-  --problem dtlz2 \
-  --pop-size 100 \
-  --n-obj 2 \
-  --n-var 7 \
-  --n-evals 100000 \
-  --seed 1
+- `data/idic_sudeste_input.csv`: base manual para complementar o indice.
+- `output/sudeste/idic_sudeste.csv`: ranking parcial do IDIC.
+- `output/sudeste/idic_relatorio.md`: relatorio sintese.
+
+### 1) Gerar o corpus
+
+Dependência para extração de texto:
+
+```
+python -m pip install pypdf
 ```
 
-## Saida
+Gerar o arquivo `output/iramuteq_corpus.txt`:
 
-Os resultados sao salvos em `.npz` na pasta `results/` com:
-
-- `X`: variaveis de decisao
-- `F`: valores de objetivos
-
-## Observacoes
-
-- Os metodos mantem a logica central da implementacao MATLAB original.
-- Pequenas diferencas numericas podem ocorrer devido a detalhes de operadores e ordenacao do `pymoo`.
-
-## Plot das solucoes no espaco de objetivos
-
-Depois de gerar resultados `.npz`, use:
-
-```bash
-PYTHONPATH=. python scripts/plot_objectives.py \
-  results/roidwu_wfg9_M2_D5_seed1.npz \
-  --title "ROIDWU - WFG9" \
-  --output results/roidwu_wfg9_plot.png
+```
+python scripts/prepare_iramuteq_corpus.py
 ```
 
-Comparando duas execucoes/algoritmos no mesmo grafico:
+### 2) Abrir no IRaMuTeQ
 
-```bash
-PYTHONPATH=. python scripts/plot_objectives.py \
-  results/roidwu_wfg9_M2_D5_seed1.npz \
-  results/roinsga2_dtlz2_M2_D7_seed1.npz \
-  --title "Comparacao"
-```
+1. Abra o IRaMuTeQ.
+2. `Corpora` -> `Nouveau corpus` e selecione `output/iramuteq_corpus.txt`.
+3. Use:
+   - `Statistiques` -> `Fréquences` ou `Nuage de mots` para frequência.
+   - `Analyses` -> `Analyse de similitude` para conectividade.
+
+O corpus inclui a variável `*doc=<nome_do_arquivo>` para facilitar filtros por instituição.
