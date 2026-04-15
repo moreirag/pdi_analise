@@ -1,18 +1,18 @@
 doc,universidade,sigla,organograma_arquivo,organograma_disponivel,unidade_cultura_nivel,unidade_cultura_nome,vinculacao_superior,produtores_culturais,politica_cultural,edital_fomento,espacos_culturais,observacoes
-PDI_UFABC,UFABC,UFABC,,nao,,,,,,,,
-PDI_UFES,UFES,UFES,Organograma Ufes.pdf,sim,,,,,,,,
-PDI_UFF,UFF,UFF,Organograma Uff.pdf,sim,,,,,,,,
-PDI_UFJF,UFJF,UFJF,Organograma UFJF.pdf,sim,,,,,,,,
-PDI_UFLA,UFLA,UFLA,Organograma UFLA.pdf,sim,,,,,,,,
-PDI_UFMG,UFMG,UFMG,Organograma UFMG.jpg,sim,,,,,,,,
-PDI_UFOP,UFOP,UFOP,,nao,,,,,,,,
-PDI_UFRRJ,UFRRJ,UFRRJ,Organograma Ufrrj.jpg,sim,,,,,,,,
-PDI_UFSCAR,UFSCAR,UFSCAR,organograma Ufscar.pdf,sim,,,,,,,,
-PDI_UFSJ,UFSJ,UFSJ,Organograma Ufsj.pdf,sim,,,,,,,,
-PDI_UFTM,UFTM,UFTM,Organograma UFTM.pdf,sim,,,,,,,,
-PDI_UFV,UFV,UFV,Organograma UFV.png,sim,,,,,,,,
-PDI_UFVJM,UFVJM,UFVJM,Organograma Ufvjm.pdf,sim,,,,,,,,
-PDI_Unifal,Unifal,Unifal,Organograma Unifal.pdf,sim,,,,,,,,
-PDI_Unifesp,Unifesp,Unifesp,Organograma Unifesp.pdf,sim,,,,,,,,
-PDI_Unirio,Unirio,Unirio,Organograma  Unirio.pdf,sim,,,,,,,,
-PIDE_UFU,UFU,UFU,,nao,,,,,,,,
+PDI_UFABC,UFABC,UFABC,,nao,,,,,sim,,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | politica cultural identificada no texto | indicio de espacos ou equipamentos culturais identificado | ajuste conservador aplicado na inferencia automatica
+PDI_UFES,UFES,UFES,Organograma Ufes.pdf,sim,,,,,,,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | indicio de espacos ou equipamentos culturais identificado | ajuste conservador aplicado na inferencia automatica
+PDI_UFF,UFF,UFF,Organograma Uff.pdf,sim,,,,,,,sim,indicio de espacos ou equipamentos culturais identificado
+PDI_UFJF,UFJF,UFJF,Organograma UFJF.pdf,sim,pro_reitoria,Pró-Reitoria de Cultura,Reitoria,,sim,sim,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | politica cultural identificada no texto | indicio de edital ou fomento cultural identificado | indicio de espacos ou equipamentos culturais identificado | ajuste conservador aplicado na inferencia automatica
+PDI_UFLA,UFLA,UFLA,Organograma UFLA.pdf,sim,pro_reitoria,Pró-Reitoria de Extensão e Cultura,Reitoria,,,,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | indicio de espacos ou equipamentos culturais identificado
+PDI_UFMG,UFMG,UFMG,Organograma UFMG.jpg,sim,pro_reitoria,Pró-Reitoria de Cultura,Reitoria,,sim,sim,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | politica cultural identificada no texto | indicio de edital ou fomento cultural identificado | indicio de espacos ou equipamentos culturais identificado | ajuste conservador aplicado na inferencia automatica
+PDI_UFOP,UFOP,UFOP,,nao,,,,,,sim,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | indicio de edital ou fomento cultural identificado | indicio de espacos ou equipamentos culturais identificado | ajuste conservador aplicado na inferencia automatica
+PDI_UFRRJ,UFRRJ,UFRRJ,Organograma Ufrrj.jpg,sim,setor,Centro de Arte e Cultura,Pro-Reitoria de Extensao,,sim,sim,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | politica cultural identificada no texto | indicio de edital ou fomento cultural identificado | indicio de espacos ou equipamentos culturais identificado | ajuste conservador aplicado na inferencia automatica
+PDI_UFSCAR,UFSCAR,UFSCAR,organograma Ufscar.pdf,sim,coordenadoria,Coordenadoria de Cultura,,,sim,sim,sim,unidade inferida a partir do organograma | nivel inferido a partir do organograma | politica cultural identificada no texto | indicio de edital ou fomento cultural identificado | indicio de espacos ou equipamentos culturais identificado
+PDI_UFSJ,UFSJ,UFSJ,Organograma Ufsj.pdf,sim,,,,,,,sim,indicio de espacos ou equipamentos culturais identificado
+PDI_UFTM,UFTM,UFTM,Organograma UFTM.pdf,sim,,,,,,,sim,indicio de espacos ou equipamentos culturais identificado
+PDI_UFV,UFV,UFV,Organograma UFV.png,sim,pro_reitoria,Pró-Reitoria de Extensão e Cultura,Reitoria,,,sim,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | indicio de edital ou fomento cultural identificado | indicio de espacos ou equipamentos culturais identificado
+PDI_UFVJM,UFVJM,UFVJM,Organograma Ufvjm.pdf,sim,pro_reitoria,Pró-Reitoria de Extensão e Cultura,Reitoria,,,sim,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | indicio de edital ou fomento cultural identificado | indicio de espacos ou equipamentos culturais identificado
+PDI_Unifal,Unifal,Unifal,Organograma Unifal.pdf,sim,,,,,,,sim,indicio de espacos ou equipamentos culturais identificado
+PDI_Unifesp,Unifesp,Unifesp,Organograma Unifesp.pdf,sim,pro_reitoria,Pró-Reitoria de Extensão e Cultura,Reitoria,,,,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | indicio de espacos ou equipamentos culturais identificado
+PDI_Unirio,Unirio,Unirio,Organograma  Unirio.pdf,sim,pro_reitoria,Pró-Reitoria de Extensão e Cultura,Reitoria,,sim,sim,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | politica cultural identificada no texto | indicio de edital ou fomento cultural identificado | indicio de espacos ou equipamentos culturais identificado
+PIDE_UFU,UFU,UFU,,nao,pro_reitoria,Pró-Reitoria de Extensão e Cultura,Reitoria,,sim,sim,sim,unidade inferida a partir do pdi | nivel inferido a partir do pdi | vinculacao inferida a partir do nome da unidade | politica cultural identificada no texto | indicio de edital ou fomento cultural identificado | indicio de espacos ou equipamentos culturais identificado | ajuste conservador aplicado na inferencia automatica
