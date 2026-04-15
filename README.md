@@ -45,6 +45,13 @@ Arquivos gerados:
 - `output/sudeste/idic_sudeste.csv`: ranking parcial do IDIC.
 - `output/sudeste/idic_relatorio.md`: relatorio sintese.
 
+Preenchimento automatico conservador da base manual:
+
+```
+python3 scripts/autofill_idic_sudeste.py
+python3 scripts/build_idic_sudeste.py
+```
+
 ### 1) Gerar o corpus
 
 Dependência para extração de texto:
